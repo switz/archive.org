@@ -17,10 +17,10 @@ $ npm install archive.org --save
 ### Example
 
 ```javascript
-Archive = require('archive.org');
-archive = new Archive();
+archive = require('archive.org');
 
 archive.search({q: 'Grateful Dead'}, function(err, res) {
   console.log(res);
 });
 ```
+
