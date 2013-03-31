@@ -1,6 +1,6 @@
 {
   "name": "archive.org",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interface with the archive.org api",
   "main": "index.js",
   "repository": {
