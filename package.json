@@ -1,0 +1,26 @@
+{
+  "name": "archive.org",
+  "version": "0.0.3",
+  "description": "Interface with the archive.org api",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/switz/archive.org.git"
+  },
+  "author": "Daniel Saewitz",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "coffee-script": "~1.6.1",
+    "superagent": "~0.13.0",
+    "nconf": "~0.6.7"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.8.2",
+    "codo": "~1.5.6"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
