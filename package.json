@@ -13,7 +13,8 @@
   "dependencies": {
     "coffee-script": "~1.6.1",
     "superagent": "~0.13.0",
-    "nconf": "~0.6.7"
+    "nconf": "~0.6.7",
+    "underscore": "~1.4.4"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
