@@ -1,2 +1,2 @@
 require('coffee-script');
-module.exports = require('./src/subsonic');
+module.exports = require('./src/archive');
