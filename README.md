@@ -12,7 +12,7 @@ $ npm install archive.org --save
 ```
 
 ### Docs
-[Documentation](http://saewitz.com/subsonic/doc/classes/Archive.html)
+[Documentation](http://saewitz.com/archive.org/doc/classes/Archive.html)
 
 ### Example
 
