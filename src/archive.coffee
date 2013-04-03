@@ -15,7 +15,10 @@ class Archive
       .query(output: 'json')
       .query(params unless typeof params is 'function')
       .end (err, res) ->
-        cb err, res.body
+        return cb res.error if res.error
+        return cb err if err
+        return cb new Error "No body" unless res || res.body
+        cb null, res.body
     @
 
   # http://archive.org/advancedsearch.php
@@ -33,9 +36,8 @@ class Archive
   item: (item, params, cb) ->
     cb = arguments[arguments.length - 1]
     @get 'details/' + item, params, (err, res) ->
-      return cb res.error if res.error
       cb err, res
 
-  v: -> '0.0.6'
+  v: -> '0.0.7'
 
 module.exports = new Archive()
