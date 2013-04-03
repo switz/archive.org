@@ -14,8 +14,8 @@ class Archive
     request.get("http://archive.org/#{path}")
       .query(output: 'json')
       .query(params unless typeof params is 'function')
-      .end (res) ->
-        cb res.body
+      .end (err, res) ->
+        cb err, res.body
     @
 
   # http://archive.org/advancedsearch.php
@@ -23,8 +23,8 @@ class Archive
   # @param  {function} callback err, res
   # @return {Archive} this
   search: (params, cb) ->
-    @get 'advancedsearch.php', params, (res) ->
-      cb null, res
+    @get 'advancedsearch.php', params, (err, res) ->
+      cb err, res
 
   # http://archive.org/details/item
   #
@@ -32,9 +32,9 @@ class Archive
   # @return {Archive} this
   item: (item, params, cb) ->
     cb = arguments[arguments.length - 1]
-    @get 'details/' + item, params, (res) ->
-      cb null, res
+    @get 'details/' + item, params, (err, res) ->
+      cb err, res
 
-  v: -> '0.0.1'
+  v: -> '0.0.5'
 
 module.exports = new Archive()
