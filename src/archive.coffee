@@ -33,8 +33,9 @@ class Archive
   item: (item, params, cb) ->
     cb = arguments[arguments.length - 1]
     @get 'details/' + item, params, (err, res) ->
+      return cb res.error if res.error
       cb err, res
 
-  v: -> '0.0.5'
+  v: -> '0.0.6'
 
 module.exports = new Archive()
